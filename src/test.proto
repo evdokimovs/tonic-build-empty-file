@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package test;
+
+import "google/protobuf/duration.proto";
+
+service Test {
+    rpc Foo (FooRequest) returns  (FooResponse);
+}
+
+message FooRequest {
+    google.protobuf.Duration timeout = 1;
+}
+
+message FooResponse {}
